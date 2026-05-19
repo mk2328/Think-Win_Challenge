@@ -406,7 +406,7 @@ export default function App() {
             <div style={s.snakeBadge}>🐍</div>
             <h1 style={s.joinTitle}>TeQuest</h1>
             <p style={s.joinChallenge}>Think Fast to Win Challenge</p>
-            <p style={s.joinSub}>Python Edition · {QUESTIONS.length} Questions · 45 Minutes</p>
+            <p style={s.joinSub}>Python Edition · {QUESTIONS.length} Questions · 30 Minutes</p>
             <div style={s.deptBadge}>Department of CS &amp; SE</div>
 
             <div style={s.inputWrapper}>
@@ -429,7 +429,7 @@ export default function App() {
             </button>
 
             <div style={s.infoRow}>
-              <span style={s.infoChip}>⏱ 45 min timer</span>
+              <span style={s.infoChip}>⏱ 30 min timer</span>
               <span style={s.infoChip}>🔄 Resume on refresh</span>
               <span style={s.infoChip}>🏆 Live scores</span>
             </div>
