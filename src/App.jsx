@@ -22,7 +22,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-const QUIZ_DURATION = 45 * 60; // 45 minutes
+const QUIZ_DURATION = 30 * 60; // 30 minutes
 const LS_KEY = "tfwc_session";
 
 function normalizeAnswer(ans) {
