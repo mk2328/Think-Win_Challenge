@@ -474,10 +474,10 @@ export default function App() {
               ))}
             </div>
             {leaderboard.length === 0 && <p style={{ color: "#94a3b8" }}>No teams found.</p>}
-            <button style={{ ...s.joinBtn, marginTop: 24, maxWidth: 240, margin: "24px auto 0" }}
+            {/* <button style={{ ...s.joinBtn, marginTop: 24, maxWidth: 240, margin: "24px auto 0" }}
               onClick={() => { saveLocal(null); localStorage.removeItem(LS_KEY); setScreen("join"); setTeamName(""); setTeamId(null); setCorrect({}); }}>
               Play Again
-            </button>
+            </button> */}
           </div>
         </div>
       </>
