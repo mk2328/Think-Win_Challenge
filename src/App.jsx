@@ -22,7 +22,7 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
-const QUIZ_DURATION = 10 * 60; // 45 minutes
+const QUIZ_DURATION = 45 * 60; // 45 minutes
 const LS_KEY = "tfwc_session";
 
 function normalizeAnswer(ans) {
@@ -93,6 +93,12 @@ export default function App() {
   const [warned5, setWarned5] = useState(false);
   const [joinError, setJoinError] = useState("");
   const [resuming, setResuming] = useState(false);
+
+  useEffect(() => {
+    const block = (e) => e.preventDefault();
+    document.addEventListener("contextmenu", block);
+    return () => document.removeEventListener("contextmenu", block);
+  }, []);
 
   const timerRef = useRef(null);
   const letterRefs = useRef([]);
@@ -673,6 +679,8 @@ export default function App() {
 const globalStyles = `
   @import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;0,800;1,400&family=DM+Mono:wght@400;500&display=swap');
   * { box-sizing: border-box; margin: 0; padding: 0; }
+  * { -webkit-user-select: none; -moz-user-select: none; user-select: none; }
+  input { -webkit-user-select: text; user-select: text; }
   body { background: #f1f5f9; font-family: 'DM Sans', sans-serif; }
   @keyframes pulse { 0%,100% { opacity:1; } 50% { opacity:0.55; } }
   @keyframes fadeIn { from { opacity:0; transform:translateY(10px); } to { opacity:1; transform:translateY(0); } }
@@ -709,7 +717,7 @@ const s = {
   },
   snakeBadge: { fontSize: 48, marginBottom: 0, display: "block", filter: "drop-shadow(0 4px 12px rgba(99,102,241,0.25))" },
   joinTitle: {
-    color: "#64135cff",              
+    color: "#64135cff",
     fontSize: 54,
     fontWeight: 900,
     letterSpacing: "-1.5px",
