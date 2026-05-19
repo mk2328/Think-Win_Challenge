@@ -398,9 +398,8 @@ export default function App() {
         <div style={s.page}>
           <div style={s.joinCard}>
             <div style={s.snakeBadge}>🐍</div>
-            <h1 style={s.joinTitle}>Think Fast to Win</h1>
-            <p style={s.joinChallenge}>CHALLENGE</p>
-            <p style={s.joinSub}>Welcome to TeQuest</p>
+            <h1 style={s.joinTitle}>TeQuest</h1>
+            <p style={s.joinChallenge}>Think Fast to Win Challenge</p>
             <p style={s.joinSub}>Python Edition · {QUESTIONS.length} Questions · 45 Minutes</p>
             <div style={s.deptBadge}>Department of CS &amp; SE</div>
 
@@ -704,29 +703,50 @@ const s = {
   loadingText: { color: "#1e293b", fontWeight: 700, fontSize: 16, marginBottom: 6 },
   loadingSubText: { color: "#94a3b8", fontSize: 13 },
   joinCard: {
-    background: "#fff", borderRadius: 24, padding: "52px 44px", width: "100%", maxWidth: 440,
-    textAlign: "center", boxShadow: "0 12px 48px rgba(99,102,241,0.13)", animation: "popIn 0.4s ease",
+    background: "#fff", borderRadius: 24, padding: "28px 36px 24px", width: "100%", maxWidth: 440,
+    textAlign: "center", boxShadow: "0 12px 48px rgba(99,102,241,0.13)", animation: "popIn 0.4s ease", display: "flex",
+    flexDirection: "column",
   },
-  snakeBadge: { fontSize: 60, marginBottom: 10, display: "block", filter: "drop-shadow(0 4px 12px rgba(99,102,241,0.25))" },
-  joinTitle: { color: "#1e293b", fontSize: 28, fontWeight: 800, letterSpacing: "-0.5px", marginBottom: 2 },
-  joinChallenge: { color: "#6366f1", fontSize: 12, fontWeight: 700, letterSpacing: "4px", marginBottom: 6 },
-  joinSub: { color: "#64748b", fontSize: 13, marginBottom: 18 },
+  snakeBadge: { fontSize: 48, marginBottom: 0, display: "block", filter: "drop-shadow(0 4px 12px rgba(99,102,241,0.25))" },
+  joinTitle: {
+    color: "#64135cff",              
+    fontSize: 54,
+    fontWeight: 900,
+    letterSpacing: "-1.5px",
+    marginBottom: 0,
+    lineHeight: "1",
+    textTransform: "uppercase",
+    // gradient lines hataao — ye teeno remove karo:
+    // background: "linear-gradient(...)",
+    // WebkitBackgroundClip: "text",
+    // WebkitTextFillColor: "transparent",
+  },
+  joinChallenge: {
+    color: "#475569",       // Standard dark slate text
+    fontSize: 11,          // Medium text size
+    fontWeight: 700,
+    letterSpacing: "5px",   // Spaced out effect
+    marginTop: 6,
+    marginBottom: 10,
+    textTransform: "uppercase"
+  },
+  joinSub: { color: "#64748b", fontSize: 13, marginBottom: 10 },
   deptBadge: {
     display: "inline-block", background: "linear-gradient(90deg,#ede9fe,#e0e7ff)",
-    color: "#6366f1", fontSize: 11, fontWeight: 700, padding: "5px 16px", borderRadius: 20, marginBottom: 32, border: "1px solid #c7d2fe",
+    color: "#6366f1", fontSize: 11, fontWeight: 700, padding: "5px 16px", borderRadius: 20, marginBottom: 16, border: "1px solid #c7d2fe",
   },
   inputWrapper: { position: "relative", marginBottom: 12 },
   inputIcon: { position: "absolute", left: 14, top: "50%", transform: "translateY(-50%)", fontSize: 16, pointerEvents: "none" },
   joinInput: {
-    width: "100%", padding: "14px 16px 14px 42px", background: "#f8fafc", border: "1.5px solid #e2e8f0",
+    width: "100%", padding: "13px 16px 13px 42px", background: "#f8fafc", border: "1.5px solid #e2e8f0",
     borderRadius: 12, color: "#1e293b", fontSize: 15, fontFamily: "'DM Sans', sans-serif", transition: "border-color 0.2s",
   },
   errorText: { color: "#ef4444", fontSize: 12, marginBottom: 8, textAlign: "left" },
   joinBtn: {
-    width: "100%", padding: "14px", background: "linear-gradient(135deg, #6366f1, #4f46e5)",
+    width: "100%", padding: "13px", background: "linear-gradient(135deg, #6366f1, #4f46e5)",
     border: "none", borderRadius: 12, color: "#fff", fontSize: 15, fontWeight: 700,
     cursor: "pointer", fontFamily: "'DM Sans', sans-serif", boxShadow: "0 4px 16px rgba(99,102,241,0.35)",
-    display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 20,
+    display: "flex", alignItems: "center", justifyContent: "center", marginBottom: 18,
   },
   infoRow: { display: "flex", gap: 8, justifyContent: "center", flexWrap: "wrap" },
   infoChip: { background: "#f1f5f9", border: "1px solid #e2e8f0", color: "#64748b", fontSize: 11, fontWeight: 500, padding: "4px 10px", borderRadius: 20 },
