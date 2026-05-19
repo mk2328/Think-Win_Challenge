@@ -398,8 +398,9 @@ export default function App() {
         <div style={s.page}>
           <div style={s.joinCard}>
             <div style={s.snakeBadge}>🐍</div>
-            <h1 style={s.joinTitle}>Think Fast Win</h1>
+            <h1 style={s.joinTitle}>Think Fast to Win</h1>
             <p style={s.joinChallenge}>CHALLENGE</p>
+            <p style={s.joinSub}>Welcome to TeQuest</p>
             <p style={s.joinSub}>Python Edition · {QUESTIONS.length} Questions · 45 Minutes</p>
             <div style={s.deptBadge}>Department of CS &amp; SE</div>
 
